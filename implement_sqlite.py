@@ -42,6 +42,7 @@ def insert_record(stocks):
     conn.set_trace_callback(print)
     c = conn.cursor()
     for stock in stocks:
+        print("Inserting record.........")
         pprint(vars(stock))
         c.execute(f""" INSERT INTO stocks
             (ticker ,

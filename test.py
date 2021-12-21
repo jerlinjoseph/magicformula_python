@@ -1,9 +1,9 @@
 from pprint import pprint
 
 from gurufocusdetails import get_gurufocus_details
-from implement_sqlite import insert_record
+from implement_mysql import insert_record
 
-stock_tickers = ['MO']
+stock_tickers = {'AOS': 50}
 magic_stock_list = []
 print("Getting Details from GuruFocus ........")
 for ticker in stock_tickers:

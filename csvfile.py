@@ -8,7 +8,7 @@ from gurufocusdetails import get_gurufocus_details
 def write_to_csv(magic_stock_list):
     global writer
     # field names
-    fields = ['Ticker', 'Company', 'Earnings Yield', 'ROC Greenblatt',
+    fields = ['Ticker', 'Company', 'Min Mkt Cap', 'Earnings Yield', 'ROC Greenblatt',
               'Interest Coverage', 'Piotroski Score', 'Cash to Debt', 'Debt to Equity',
               'Operating Margin', 'Net Margin', 'ROE', 'ROA', '3 year revenue growth',
               '3 year eps growth', 'P/E', 'P/B', 'P/OE', 'P/FCF', 'P/OCF', 'Dividend Yield',
@@ -22,6 +22,7 @@ def write_to_csv(magic_stock_list):
             for item in magic_stock_list:
                 writer.writerow([item.ticker,
                                  item.company,
+                                 item.min_market_cap,
                                  item.earnings_yield_greenblatt,
                                  item.roc_greenblatt,
                                  item.interest_coverage,

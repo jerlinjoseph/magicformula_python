@@ -14,7 +14,9 @@ def magic_formula_parse_html(marketcap, html_text, tickers):
     print(f"Stocks with minimum market cap of {marketcap}")
     for td in tds:
         #print(td.text)
-        tickers.append(td.text)
+        #tickers.append(td.text)
+        if td.text not in tickers:
+            tickers[td.text] = marketcap
 
 
 def magic_formula_login(driver):
